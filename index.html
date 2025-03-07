@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <title>
+   Snakebird
+  </title>
+  <link rel="shortcut icon" href="snakebird.ico" />
+  <script language="javascript" type="text/javascript">
+   //<!--
+
+    let FONTS_WERE_LOADED = false;
+
+   //-->
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script language="javascript" type="text/javascript" src="js/levels/std_lvls.js"></script>
+  <script language="javascript" type="text/javascript" src="js/levels/gravity_lvls.js"></script>
+  <script language="javascript" type="text/javascript" src="js/levels/infinity_lvls.js"></script>
+  <script language="javascript" type="text/javascript" src="js/levels/snakefall_lvls.js"></script>
+  <script language="javascript" type="text/javascript" src="js/levels/dev_lvls.js"></script>
+  <script language="javascript" type="text/javascript" src="js/ds.js"></script>
+  <script language="javascript" type="text/javascript" src="js/GameState.js"></script>
+  <script language="javascript" type="text/javascript" src="js/gameTransition.js"></script>
+  <script language="javascript" type="text/javascript" src="js/GameSolver.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/draw-utils.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/bezier.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/text.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/button.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/spikes.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/obstacle.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/cloud.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/target.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/portal.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/fruit.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/portation-utils.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/block-utils.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/block.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/snake.js"></script>
+  <script language="javascript" type="text/javascript" src="js/graphics/mountain.js"></script>
+  <script language="javascript" type="text/javascript" src="js/GameDrawer.js"></script>
+  <script language="javascript" type="text/javascript" src="js/GameBoard.js"></script>
+  <script language="javascript" type="text/javascript" src="js/LocalStorageHelper.js"></script>
+  <script language="javascript" type="text/javascript" src="js/level-editor-utils.js"></script>
+  <script language="javascript" type="text/javascript" src="js/LevelEditor.js"></script>
+  <script language="javascript" type="text/javascript" src="js/LevelSelector.js"></script>
+  <script language="javascript" type="text/javascript">
+   //<!--
+
+    let levelSel, htmlWasLoaded = false, fontWasLoaded = false;
+
+    WebFont.load({
+      google: {
+        families: ['Fredoka One']
+      },
+      active: () => fontsLoaded()
+    });
+
+    function fontsLoaded() {
+      FONTS_WERE_LOADED = true;
+      if (levelSel) levelSel.redraw();
+    }
+
+    function main() {
+      if (!levelSel)
+        levelSel = new LevelSelector(document.body, [
+          new LevelCollection('Snakebird Original', std_levels),
+          new LevelCollection('Which way is up?', gravity_levels),
+          new LevelCollection('Endless Space', infinity_levels),
+          new LevelCollection('Snakefall', snakefall_levels),
+          new LevelCollection('Development Levels', dev_levels)
+        ]);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => main());
+
+   //-->
+  </script>
+  <link rel="stylesheet" type="text/css" href="css/level-editor.css" />
+  <link rel="stylesheet" type="text/css" href="css/level-selector.css" />
+  <link rel="stylesheet" type="text/css" href="css/mf-file-selector.css" />
+  <style type="text/css">
+   
+  </style>
+ </head>
+ <body onLoad="main();">
+  
+ </body>
+</html>
