@@ -10,7 +10,7 @@ and can be bought...
 The game is mostly finished. Some small changes could still be made from time to time.
 
 You can currently play all the original levels at
-[https://m-ff-m.github.io/snakebird/](https://m-ff-m.github.io/snakebird/) or clone the
+[https://vinsmokesomya.github.io/Snakebird/](https://vinsmokesomya.github.io/Snakebird/) or clone the
 repository and open index.html. In addition, all the
 [Snakefall](https://github.com/thejoshwolfe/snakefall) levels available at
 [github.com/thejoshwolfe/snakefall/wiki](https://github.com/thejoshwolfe/snakefall/wiki)
