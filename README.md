@@ -1,4 +1,14 @@
-# 🐍🐦 Snakebird JS
+<div align="center">
+  🚩🧡🕉️ || जय श्री राम || 🕉️🧡🚩
+</div>
+
+---
+
+<div align="center">
+  <h1 style="border-bottom: none;">
+    🐍🐦 Snakebird JS
+  </h1>
+</div>
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 [![GitHub issues](https://img.shields.io/github/issues/vinsmokesomya/Snakebird)](https://github.com/vinsmokesomya/Snakebird/issues)
